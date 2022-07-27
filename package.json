@@ -15,6 +15,7 @@
     "clean": "rm -rf ./dist",
     "prebuild": "npm run clean",
     "build": "tsc -p ./tsconfig.build.json && tsc -p ./tsconfig.build-es6.json && npm run import-path-rewrite && ts-node scripts/build",
+    "denoify": "npm run build && denoify && sh scripts/build-deno.sh",
     "postbuild": "prettier --loglevel=silent --write \"./dist/**/*.ts\"",
     "prepublishOnly": "ts-node scripts/pre-publish",
     "dtslint": "dtslint dtslint",
@@ -33,16 +34,19 @@
   "bugs": {
     "url": "https://github.com/gcanti/io-ts-types/issues"
   },
+  "denoify": {
+    "out": "dist/deno",
+    "index": "src/index.ts"
+  },
   "homepage": "https://github.com/gcanti/io-ts-types",
   "peerDependencies": {
     "fp-ts": "^2.0.0",
-    "io-ts": "^2.0.0",
-    "monocle-ts": "^2.0.0",
-    "newtype-ts": "^0.3.2"
+    "io-ts": "^2.0.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.15",
     "@types/node": "^14.0.27",
+    "denoify": "^0.11.6",
     "docs-ts": "^0.3.4",
     "dtslint": "github:gcanti/dtslint",
     "fp-ts": "^2.8.0",

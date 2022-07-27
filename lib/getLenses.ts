@@ -1,8 +1,8 @@
 /**
  * @since 0.5.0
  */
-import * as t from 'io-ts'
-import { Lens } from 'monocle-ts'
+import * as t from 'https://raw.githubusercontent.com/michaelhirn/io-ts/master/lib/index.ts'
+import { Lens } from 'monocle-ts.ts'
 
 /**
  * @since 0.5.0
@@ -29,8 +29,8 @@ const fromProp = Lens.fromProp<any>()
  * Return a `Lens` for each prop
  *
  * @example
- * import * as t from 'io-ts'
- * import { getLenses } from 'io-ts-types/lib/getLenses'
+ * import * as t from 'https://raw.githubusercontent.com/michaelhirn/io-ts/master/lib'
+ * import { getLenses } from 'https://raw.githubusercontent.com/michaelhirn/io-ts/master/lib-types/lib/getLenses'
  *
  * const Person = t.type({
  *   name: t.string,

@@ -31,11 +31,6 @@ export * from './date'
 /**
  * @since 0.5.8
  */
-export * from './fromNewtype'
-
-/**
- * @since 0.5.8
- */
 export * from './optionFromNullable'
 
 /**
@@ -87,11 +82,6 @@ export * from './withMessage'
  * @since 0.5.8
  */
 export * from './withValidate'
-
-/**
- * @since 0.5.8
- */
-export * from './getLenses'
 
 /**
  * @since 0.5.8
